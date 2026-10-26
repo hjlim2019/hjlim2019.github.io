@@ -1,0 +1,245 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>친구가 차곡차곡에 초대했어요</title>
+<meta name="description" content="이 링크로 시작하면 광고 건너뛰기 또는 끊긴 연속 이어가기 선물 1회">
+<meta property="og:title" content="친구가 차곡차곡에 초대했어요">
+<meta property="og:description" content="이 링크로 시작하면 광고 건너뛰기 또는 끊긴 연속 이어가기 선물 1회">
+<meta property="og:type" content="website">
+<meta name="robots" content="noindex">
+<style>
+  :root {
+    --text: #2A2416;
+    --muted: #776C58;
+    --brown: #6E501F;
+    --gold: #F5C04E;
+    --gold-deep: #84630E;
+    --ink: #2B2418;
+    --dusk-text: #4A3B6B;
+    --card: #FFFFFF;
+    --hairline: #F2EBDA;
+    --ad-tile: #FDF6E4;
+    --rest-tile: #EEEFF6;
+    --bg: linear-gradient(180deg, #DCD6F2 0%, #EFDDE0 32%, #FCEDC6 62%, #FDFAF3 100%);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text: #F3ECDF;
+      --muted: #A89C86;
+      --brown: #F0D9A6;
+      --gold-deep: #F4C862;
+      --dusk-text: #F0D9A6;
+      --card: #221E17;
+      --hairline: #2E2920;
+      --ad-tile: #2D2617;
+      --rest-tile: #262A42;
+      --bg: linear-gradient(180deg, #2A2542 0%, #2E2530 32%, #2D2617 62%, #17140F 100%);
+    }
+  }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; }
+  body {
+    background: var(--bg);
+    background-attachment: fixed;
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Apple SD Gothic Neo", "Hiragino Sans", system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+  main {
+    max-width: 420px;
+    margin: 0 auto;
+    padding: calc(40px + env(safe-area-inset-top)) 20px calc(40px + env(safe-area-inset-bottom));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 18px;
+    text-align: center;
+  }
+  .mark {
+    width: 64px; height: 64px; border-radius: 16px;
+    background: #0E1730;
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 6px 18px rgba(110, 80, 31, 0.18);
+  }
+  h1 { margin: 0; font-size: 25px; line-height: 1.35; letter-spacing: -0.4px; color: var(--dusk-text); }
+  .lead { margin: 6px 0 0; font-size: 15px; line-height: 1.5; color: var(--brown); }
+  .card {
+    width: 100%;
+    background: var(--card);
+    border-radius: 20px;
+    padding: 18px 16px 16px;
+    box-shadow: 0 2px 12px rgba(75, 70, 54, 0.1);
+    display: flex; flex-direction: column; gap: 14px;
+    text-align: left;
+  }
+  .gift-head { display: flex; align-items: center; gap: 10px; }
+  .gift-icon {
+    width: 40px; height: 40px; flex-shrink: 0; border-radius: 12px;
+    background: #FCEDC6; display: flex; align-items: center; justify-content: center;
+  }
+  .gift-title { font-size: 17px; font-weight: 700; }
+  .gift-sub { font-size: 13px; color: var(--muted); margin-top: 2px; }
+  .tiles { position: relative; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+  .tile { border-radius: 14px; padding: 12px 10px 12px 12px; word-break: keep-all; }
+  .tile.ad { background: var(--ad-tile); }
+  .tile.rest { background: var(--rest-tile); padding-left: 22px; }
+  .tile b { display: block; font-size: 14px; white-space: nowrap; letter-spacing: -0.3px; }
+  .tile span { display: block; margin-top: 4px; font-size: 12px; line-height: 1.4; color: var(--muted); }
+  .or {
+    position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+    width: 34px; height: 34px; border-radius: 17px; background: var(--card);
+    box-shadow: 0 0 0 3px var(--card), 0 1px 4px rgba(75, 70, 54, 0.18);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; color: var(--muted);
+  }
+  .code-row { display: flex; align-items: center; justify-content: space-between; border-top: 1px solid var(--hairline); padding-top: 12px; }
+  .code-row small { font-size: 13px; color: var(--muted); }
+  .code { font-size: 20px; font-weight: 700; letter-spacing: 4px; font-family: ui-rounded, -apple-system, system-ui, sans-serif; }
+  .button {
+    width: 100%; height: 56px; border: 0; border-radius: 16px;
+    background: var(--gold); color: var(--ink);
+    font: inherit; font-size: 17px; font-weight: 700;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; cursor: pointer;
+    box-shadow: 0 4px 12px rgba(245, 192, 78, 0.4);
+  }
+  ol { margin: 2px 0 0; padding: 0 4px; width: 100%; list-style: none; text-align: left; display: flex; flex-direction: column; gap: 9px; counter-reset: step; }
+  li { display: flex; gap: 10px; font-size: 14px; line-height: 1.45; color: var(--brown); counter-increment: step; }
+  li::before { content: counter(step); font-weight: 700; color: var(--gold-deep); }
+  .hidden { display: none; }
+  footer { margin-top: 12px; font-size: 12px; color: var(--muted); }
+  footer a { color: var(--muted); }
+</style>
+</head>
+<body>
+<main>
+  <div class="mark" aria-hidden="true">
+    <svg width="34" height="34" viewBox="-12 -12 24 24"><path d="M0,-10 L2.94,-4.05 L9.51,-3.09 L4.76,1.55 L5.88,8.09 L0,5 L-5.88,8.09 L-4.76,1.55 L-9.51,-3.09 L-2.94,-4.05Z" fill="#F5C04E" stroke="#F5C04E" stroke-width="2" stroke-linejoin="round"/></svg>
+  </div>
+  <div>
+    <h1 data-t="title">친구가 차곡차곡에<br>초대했어요</h1>
+    <p class="lead" data-t="lead">하루에 하나씩 체크하며 습관을 쌓는 앱이에요.</p>
+  </div>
+
+  <section class="card" id="gift">
+    <div class="gift-head">
+      <div class="gift-icon" aria-hidden="true">
+        <svg width="22" height="22" viewBox="0 0 26 26"><rect x="3" y="10" width="20" height="13" rx="2.5" fill="none" stroke="#84630E" stroke-width="2"/><rect x="1.5" y="6" width="23" height="5" rx="2" fill="#F5C04E" stroke="#84630E" stroke-width="2"/><path d="M13 6v17M13 6c-2-4-7-4-6 0M13 6c2-4 7-4 6 0" fill="none" stroke="#84630E" stroke-width="2" stroke-linecap="round"/></svg>
+      </div>
+      <div>
+        <div class="gift-title" data-t="giftTitle">이 링크로 시작하면 초대 선물 1개</div>
+        <div class="gift-sub" data-t="giftSub">첫 습관을 만들면 받고, 둘 중 하나로 써요</div>
+      </div>
+    </div>
+    <div class="tiles">
+      <div class="tile ad"><b data-t="adTitle">광고 건너뛰기</b><span data-t="adSub">광고가 나올 때<br>한 번 건너뛰기</span></div>
+      <div class="tile rest"><b data-t="restTitle">끊긴 연속 이어가기</b><span data-t="restSub">끊긴 연속을<br>한 번 되살리기</span></div>
+      <div class="or" data-t="or">또는</div>
+    </div>
+    <div class="code-row" id="code-row">
+      <small data-t="codeLabel">초대 코드</small>
+      <span class="code" id="code"></span>
+    </div>
+  </section>
+
+  <a class="button" id="get" href="https://apps.apple.com/app/id6822179228" data-t="button">코드 복사하고 앱 받기</a>
+
+  <ol id="steps">
+    <li data-t="step1">버튼을 누르면 코드가 복사되고 App Store가 열려요</li>
+    <li data-t="step2">앱을 열고 오늘 탭의 [붙여넣기]로 코드를 등록해요</li>
+    <li data-t="step3">첫 습관을 만들면 나도, 초대한 친구도 선물을 받아요</li>
+  </ol>
+
+  <footer><a href="/" data-t="about">차곡 소개</a> · <a href="/privacy/" id="privacy" data-t="privacy">개인정보 처리방침</a></footer>
+</main>
+<script>
+  (function () {
+    var appStore = "https://apps.apple.com/app/id6822179228";
+    var texts = {
+      en: {
+        doc: "A friend invited you to Chagok",
+        title: "A friend invited you<br>to Chagok",
+        lead: "A habit tracker where you check in one day at a time.",
+        giftTitle: "Start with this link for 1 invite gift",
+        giftSub: "You get it after your first habit. Use it for either one",
+        adTitle: "Skip an ad", adSub: "Skip one ad<br>when it appears",
+        restTitle: "Repair a broken streak", restSub: "Restore a broken<br>streak once",
+        or: "or", codeLabel: "Invite code",
+        button: "Copy code and get the app", buttonNoCode: "Get the app",
+        step1: "Tap the button to copy the code and open the App Store",
+        step2: "Open the app and tap [Paste] on the Today tab to register the code",
+        step3: "Create your first habit and you and your friend both get a gift",
+        about: "About Chagok", privacy: "Privacy Policy", privacyHref: "/en/privacy/"
+      },
+      ja: {
+        doc: "友だちがChagokに招待しました",
+        title: "友だちがChagokに<br>招待しました",
+        lead: "1日ずつチェックして習慣を積み重ねるアプリです。",
+        giftTitle: "このリンクから始めると招待ギフト1個",
+        giftSub: "最初の習慣を作るともらえて、どちらか1つに使えます",
+        adTitle: "広告スキップ", adSub: "広告が出たとき<br>1回スキップ",
+        restTitle: "途切れた連続をつなげる", restSub: "途切れた連続を<br>1回つなげる",
+        or: "または", codeLabel: "招待コード",
+        button: "コードをコピーしてアプリを入手", buttonNoCode: "アプリを入手",
+        step1: "ボタンを押すとコードがコピーされ、App Storeが開きます",
+        step2: "アプリを開いて今日タブの[ペースト]でコードを登録します",
+        step3: "最初の習慣を作ると、あなたと友だちの両方にギフトが届きます",
+        about: "Chagokについて", privacy: "プライバシーポリシー", privacyHref: "/en/privacy/"
+      }
+    };
+
+    var lang = (navigator.language || "ko").slice(0, 2);
+    var t = texts[lang];
+    if (t) {
+      document.documentElement.lang = lang;
+      document.title = t.doc;
+      document.querySelectorAll("[data-t]").forEach(function (el) {
+        var value = t[el.getAttribute("data-t")];
+        if (value) el.innerHTML = value;
+      });
+      document.getElementById("privacy").href = t.privacyHref;
+    }
+
+    var raw = new URLSearchParams(location.search).get("c") || "";
+    var code = raw.toUpperCase();
+    var isValid = /^[ABCDEFGHJKLMNPQRSTUVWXYZ23456789]{6}$/.test(code);
+    var button = document.getElementById("get");
+
+    if (!isValid) {
+      document.getElementById("code-row").classList.add("hidden");
+      document.getElementById("steps").classList.add("hidden");
+      button.textContent = t ? t.buttonNoCode : "앱 받기";
+      return;
+    }
+    document.getElementById("code").textContent = code;
+    // 앱이 클립보드에서 링크를 알아보도록 초대 링크 전체를 복사한다.
+    var link = location.origin + "/invite/?c=" + code;
+
+    function copyFallback(text) {
+      var area = document.createElement("textarea");
+      area.value = text;
+      area.setAttribute("readonly", "");
+      area.style.position = "fixed";
+      area.style.opacity = "0";
+      document.body.appendChild(area);
+      area.select();
+      try { document.execCommand("copy"); } catch (e) {}
+      document.body.removeChild(area);
+    }
+
+    button.addEventListener("click", function (event) {
+      event.preventDefault();
+      var open = function () { location.href = appStore; };
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(link).then(open, function () { copyFallback(link); open(); });
+      } else {
+        copyFallback(link);
+        open();
+      }
+    });
+  })();
+</script>
+</body>
+</html>
